@@ -2,11 +2,11 @@ package bankaccountapp;
 
 public abstract class Account implements IBaseRate {
     // List common properties for savings and checking accounts
-    String name;
-    String sSN;
+    private String name;
+    private String sSN;
     double balance;
 
-    static int index = 10000;
+    private static int index = 10000;
     String accountNumber;
     String accountType;
     double rate;
@@ -36,5 +36,22 @@ public abstract class Account implements IBaseRate {
     public void showInfo() {
         System.out.println("NAME: " + name + "\nACCOUNT NUMBER: " + accountNumber + "\nBALANCE: " + balance
                 + "\nACCOUNT TYPE: " + accountType + "\nINTREST RATE: " + rate);
+    }
+
+    public void deposit(double amount) {
+        this.balance = this.balance + amount;
+    }
+
+    public void withdraw(double amount) {
+        this.balance = this.balance - amount;
+    }
+
+    public void transfer(double amount, Account toAccount) {
+        this.withdraw(amount);
+        toAccount.deposit(amount);
+    }
+
+    public void printBalance() {
+        System.out.println("BALANCE: " + balance);
     }
 }
