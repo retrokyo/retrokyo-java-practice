@@ -59,8 +59,4 @@ public abstract class Account implements IBaseRate {
     public void printBalance() {
         System.out.println("BALANCE: " + balance);
     }
-
-    public boolean equals(String searchAcc) {
-        return this.accountNumber.equals(searchAcc);
-    }
 }
