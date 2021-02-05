@@ -1,3 +1,7 @@
+# Note
+All the ideas for the projects came from https://www.udemy.com/course/practice-java-by-building-projects/
+Its a really great course for just jumping in and trying Java out, and there are plenty of optimizations, and extra features that you could add
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
