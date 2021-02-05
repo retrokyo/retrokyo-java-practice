@@ -16,9 +16,14 @@ public abstract class Account implements IBaseRate {
         this.name = name;
         this.sSN = sSN;
         this.balance = initialDeposit;
+
         this.accountNumber = setAccountNumber();
         index++;
+
+        setRate();
     }
+
+    public abstract void setRate();
 
     private String setAccountNumber() {
         String lastTwoOfSSN = sSN.substring(sSN.length() - 2, sSN.length());
@@ -30,6 +35,6 @@ public abstract class Account implements IBaseRate {
     // List common methods
     public void showInfo() {
         System.out.println("NAME: " + name + "\nACCOUNT NUMBER: " + accountNumber + "\nBALANCE: " + balance
-                + "\nACCOUNT TYPE: " + accountType);
+                + "\nACCOUNT TYPE: " + accountType + "\nINTREST RATE: " + rate);
     }
 }

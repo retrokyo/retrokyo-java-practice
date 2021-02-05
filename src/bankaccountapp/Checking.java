@@ -13,6 +13,11 @@ public class Checking extends Account {
         setDebitCard();
     }
 
+    @Override
+    public void setRate() {
+        this.rate = getBaseRate() * .15;
+    }
+
     // List any methods associated with checking account
     public void showInfo() {
         super.showInfo();

@@ -13,6 +13,11 @@ public class Savings extends Account {
         setSafetyDepositBox();
     }
 
+    @Override
+    public void setRate() {
+        this.rate = getBaseRate() - 0.25;
+    }
+
     // List methods associated with savings accounts
     public void showInfo() {
         super.showInfo();
