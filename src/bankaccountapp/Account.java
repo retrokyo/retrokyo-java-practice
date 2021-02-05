@@ -6,6 +6,7 @@ public abstract class Account implements IBaseRate {
     String sSN;
     double balance;
 
+    static int index = 10000;
     String accountNumber;
     double rate;
 
@@ -14,7 +15,19 @@ public abstract class Account implements IBaseRate {
         this.name = name;
         this.sSN = sSN;
         this.balance = initialDeposit;
+        this.accountNumber = setAccountNumber();
+        index++;
+    }
+
+    private String setAccountNumber() {
+        String lastTwoOfSSN = sSN.substring(sSN.length() - 2, sSN.length());
+        int uniqueId = index;
+        int randomNumber = (int) (Math.random() * Math.pow(10, 3));
+        return lastTwoOfSSN + uniqueId + randomNumber;
     }
 
     // List common methods
+    public void showInfo() {
+        System.out.println("NAME: " + name + "\nACCOUNT NUMBER: " + accountNumber + "\nBALANCE: " + balance);
+    }
 }

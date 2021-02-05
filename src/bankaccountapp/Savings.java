@@ -8,7 +8,12 @@ public class Savings extends Account {
     // Constructor to intialize settings for savings properties
     public Savings(String name, String sSN, double initialDeposit) {
         super(name, sSN, initialDeposit);
+        this.accountNumber = 1 + this.accountNumber;
     }
 
     // List methods associated with savings accounts
+    public void showInfo() {
+        super.showInfo();
+        // Savings account custom logic
+    }
 }
