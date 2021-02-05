@@ -8,6 +8,7 @@ public abstract class Account implements IBaseRate {
 
     static int index = 10000;
     String accountNumber;
+    String accountType;
     double rate;
 
     // Constructor set base properties and initialize the account
@@ -28,6 +29,7 @@ public abstract class Account implements IBaseRate {
 
     // List common methods
     public void showInfo() {
-        System.out.println("NAME: " + name + "\nACCOUNT NUMBER: " + accountNumber + "\nBALANCE: " + balance);
+        System.out.println("NAME: " + name + "\nACCOUNT NUMBER: " + accountNumber + "\nBALANCE: " + balance
+                + "\nACCOUNT TYPE: " + accountType);
     }
 }

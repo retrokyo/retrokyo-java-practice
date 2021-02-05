@@ -8,6 +8,7 @@ public class BankAccountApp {
         Savings sacc2 = new Savings("Tyler Wilson", "854632594", 1000);
 
         chkacc1.showInfo();
+        System.out.println("*****************************");
         sacc2.showInfo();
     }
 }
