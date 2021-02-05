@@ -14,7 +14,7 @@ public class Checking extends Account {
     }
 
     @Override
-    public void setRate() {
+    protected void setRate() {
         this.rate = getBaseRate() * .15;
     }
 

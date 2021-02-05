@@ -23,7 +23,7 @@ public abstract class Account implements IBaseRate {
         setRate();
     }
 
-    public abstract void setRate();
+    protected abstract void setRate();
 
     private String setAccountNumber() {
         String lastTwoOfSSN = sSN.substring(sSN.length() - 2, sSN.length());
