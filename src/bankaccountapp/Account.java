@@ -32,6 +32,11 @@ public abstract class Account implements IBaseRate {
         return lastTwoOfSSN + uniqueId + randomNumber;
     }
 
+    public void compound() {
+        double accuredIntrest = this.balance * (this.rate / 100);
+        this.deposit(accuredIntrest);
+    }
+
     // List common methods
     public void showInfo() {
         System.out.println("NAME: " + name + "\nACCOUNT NUMBER: " + accountNumber + "\nBALANCE: " + balance
@@ -53,5 +58,9 @@ public abstract class Account implements IBaseRate {
 
     public void printBalance() {
         System.out.println("BALANCE: " + balance);
+    }
+
+    public boolean equals(String searchAcc) {
+        return this.accountNumber.equals(searchAcc);
     }
 }
